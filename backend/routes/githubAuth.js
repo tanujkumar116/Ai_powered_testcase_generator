@@ -7,7 +7,7 @@ const router = express.Router();
 
 const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
-const REDIRECT_URI = "http://localhost:5173/auth/callback";
+const REDIRECT_URI = `${process.env.FRONTEND_URL}auth/callback`;
 
 // Step 1 - Get GitHub OAuth URL
 router.get("/github", (req, res) => {
